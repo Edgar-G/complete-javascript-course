@@ -34,3 +34,24 @@
 // Keep your code DRY (Dont repeat yourself) this is why functions are super useful.
 
 // CH34 Function Declarations vs. Expressions
+/*
+// Function Declaration
+// We can call declarations before. This happens because of a process called Hoisting.
+function calcAge1(birthYear) {
+    return 2037 - birthYear;
+}
+
+const age1 = calcAge1(1998);
+console.log(age1);
+
+// Function Expression
+const calcAge2 = function (birthYear) {
+    return 2037 - birthYear;
+}
+
+const age2 = calcAge2(1998);
+console.log(age1, age2);
+*/
+
+// Lecture 35 Arrow Functions
+
