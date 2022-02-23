@@ -54,4 +54,80 @@ console.log(age1, age2);
 */
 
 // Lecture 35 Arrow Functions
+/*
+const calcAge2 = function (birthYear) {
+    return 2037 - birthYear;
+}
 
+// Arrow function
+
+const calcAge3 = birthYear => 2037 - birthYear;
+
+console.log(calcAge2(1998), calcAge3(1998));
+
+const yearsUntilRetirement = (birthYear, firstName) => {
+    const age = 2037 - birthYear;
+    const retirement = 65 - age;
+    return `${firstName} retires in ${retirement} years!`;
+}
+
+console.log(yearsUntilRetirement(1998, 'Edgar'));
+console.log(yearsUntilRetirement(1991, 'Jonas'));
+*/
+
+// Lecture 36 Nested Functions
+/*
+function cutFruitPieces(fruit) {
+    return fruit * 3;
+}
+
+function fruitProcessor(apples, oranges) {
+    const applePieces = cutFruitPieces(apples);
+    const orangePieces = cutFruitPieces(oranges);
+    const juice = `Juice with ${applePieces} pieces of apple and ${orangePieces} pieces of orange.`;
+    return juice;
+}
+
+const x = fruitProcessor(4, 4);
+console.log(x);
+*/
+
+// Lecture 37 Fundamental Principles of Functions
+
+/*
+const calcAge = function (birthYear) {
+    return 2037 - birthYear;
+}
+
+const yearsUntilRetirement = function (birthYear, firstName) {
+    const age = calcAge(birthYear);
+    const retirement = 65 - age;
+    if (retirement > 0) {
+        return `${firstName} retires in ${retirement} years!`;
+        return retirement;
+    } else {
+        console.log(`${firstName} has already retired! :)`)
+        return -1;
+    }
+
+}
+
+console.log(yearsUntilRetirement(1998, 'Edgar'));
+console.log(yearsUntilRetirement(1950, 'Mike'));
+
+
+// REVIEW
+
+//FUNCTION DECLARATION
+function calcAge(birthYear) {
+    return 2037 - birthYear;
+}
+
+//FUNCTION EXPRESSION
+const calcAge = function (birthYear) {
+    return 2037 - birthYear;
+}
+
+//ARROW FUNCTION
+const calcAge = birthYear => 2037 - birthYear;
+*/
