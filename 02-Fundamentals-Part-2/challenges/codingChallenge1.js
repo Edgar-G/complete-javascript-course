@@ -11,20 +11,24 @@
 //TEST DATA1: D = 44, 23, 71; K = 65, 54, 49;
 //TEST DATA2: D = 85, 54, 41; K = 23, 34, 27;
 
-const calcAverage = (game1, game2, game3) => {
-    return (game1 + game2 + game3) / 3;
-}
+const calcAverage = (game1, game2, game3) => (game1 + game2 + game3) / 3;
 
-// const avgDolphins = calcAverage(44, 23, 71);
-// const avgKoalas = calcAverage(65, 54, 49);
-const avgDolphins = calcAverage(85, 54, 41);
-const avgKoalas = calcAverage(23, 34, 27);
+let avgDolphins = calcAverage(44, 23, 71);
+let avgKoalas = calcAverage(65, 54, 49);
 
 const checkWinner = function (avgDolphins, avgKoalas) {
     if (avgDolphins >= (avgKoalas * 2)) {
         console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
-    } else {
+    } else if (avgKoalas >= (avgDolphins * 2)) {
         console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);
+    } else {
+        console.log(`No team wins :(`)
     }
 }
+// TEST DATA 1
+checkWinner(avgDolphins, avgKoalas);
+
+// TEST DATA 2
+avgDolphins = calcAverage(85, 54, 41);
+avgKoalas = calcAverage(23, 34, 27);
 checkWinner(avgDolphins, avgKoalas);
